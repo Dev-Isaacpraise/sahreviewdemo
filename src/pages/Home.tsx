@@ -28,9 +28,14 @@ export default function Home(){
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight">
                 Scholars Academic Hub
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-white/90 mb-4 sm:mb-6 md:mb-8 leading-relaxed max-w-xl">
-                Your gateway to academic excellence. Explore journals, books, and literature from leading scholars worldwide.
-              </p>
+              <div className="text-base sm:text-lg md:text-xl text-white/90 mb-4 sm:mb-6 md:mb-8 leading-relaxed max-w-xl space-y-4">
+                <p>
+                  Your gateway to academic excellence.
+                </p>
+                <p>
+                  Explore Academic Journals, books across disciplines, and all genres of literature from leading scholars worldwide.
+                </p>
+              </div>
               <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                 <Link 
                   to="/journal" 
@@ -108,17 +113,20 @@ export default function Home(){
       </div>
 
       {/* About Section */}
-      <section className="bg-gradient-to-br from-violet-50 via-purple-50 to-fuchsia-50 rounded-lg shadow-lg p-8 md:p-12 border-2 border-purple-200">
-        <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">About Scholars Academic Hub</h2>
+      <section className="bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 rounded-lg shadow-lg p-8 md:p-12 border-2 border-cyan-200">
+        <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">About Scholars Academic Hub</h2>
         <div className="prose max-w-none text-slate-700 space-y-4">
           <p>
-            Scholars Academic Hub is a comprehensive platform dedicated to advancing academic excellence and knowledge dissemination. We provide access to peer-reviewed journals, academic books, and literary works from leading scholars and researchers worldwide.
+            Scholars Academic Hub is a premier online platform of the School of Languages, Kogi State College of Education Ankpa, Nigeria, is dedicated to publishing high-quality, peer-reviewed research across various disciplines. Our mission is to provide a dynamic space for scholars, researchers, and academics to share their work, foster collaboration, and contribute to the advancement of knowledge.
           </p>
           <p>
-            Our mission is to bridge the gap between research and practice, making high-quality academic content accessible to researchers, students, and professionals across various disciplines. We are committed to maintaining the highest standards of academic integrity and scholarly excellence.
+            We publish online journals and books that cater to a wide range of academic fields, including sciences, humanities, social sciences, and more. Our publications are rigorously peer-reviewed, ensuring that our content meets the highest standards of academic excellence.
           </p>
           <p>
-            Through our diverse collection of journals covering languages, literature, education, computer science, machine learning, and scientific innovations, we aim to foster intellectual growth and contribute to the global academic community.
+            At Scholars Academic Hub, we believe in making knowledge accessible to all. Our open-access model allows readers from around the world to access and engage with our content, promoting global knowledge sharing and collaboration.
+          </p>
+          <p>
+            Join us in our pursuit of academic excellence and innovation. Submit your work, engage with our community, and contribute to the growth of knowledge.
           </p>
         </div>
       </section>

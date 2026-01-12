@@ -10,17 +10,16 @@ export type Article = {
 }
 
 export const articles: Article[] = [
-  // Current issue samples for JLLE (10)
-  { id: 'c1', title: 'Reimagining Social Spaces: An Ethnographic Study', author: 'Dr Joseph Abuh', affiliation: 'Dean, School of Languages, Kogi State College of Education, Ankpa', pages: '1-12', category: 'current', pdf: '/assets/sample-current-1.pdf', journalId: 'jlle' },
-  { id: 'c2', title: 'Language Acquisition in Multilingual Contexts', author: 'Prof. B. Linguist', affiliation: 'Dept. of Linguistics, City University', pages: '13-24', category: 'current', pdf: '/assets/sample-current-2.pdf', journalId: 'jlle' },
-  { id: 'c3', title: 'Digital Literacy and Education', author: 'Dr D. Educator', affiliation: 'School of Education & Communications', pages: '25-36', category: 'current', pdf: '/assets/sample-current-3.pdf', journalId: 'jlle' },
-  { id: 'c4', title: 'Literary Analysis of Contemporary African Fiction', author: 'E. Scholar', affiliation: 'Department of Literature', pages: '37-48', category: 'current', pdf: '/assets/sample-current-4.pdf', journalId: 'jlle' },
-  { id: 'c5', title: 'Women in Educational Leadership', author: 'F. Researcher', affiliation: 'Centre for Gender Studies', pages: '49-60', category: 'current', pdf: '/assets/sample-current-5.pdf', journalId: 'jlle' },
-  { id: 'c6', title: 'Language Shift and Cultural Identity', author: 'G. Linguist', affiliation: 'Department of Linguistics', pages: '61-72', category: 'current', pdf: '/assets/sample-current-6.pdf', journalId: 'jlle' },
-  { id: 'c7', title: 'Pedagogical Approaches in Language Teaching', author: 'H. Teacher', affiliation: 'Institute for Language Education', pages: '73-84', category: 'current', pdf: '/assets/sample-current-7.pdf', journalId: 'jlle' },
-  { id: 'c8', title: 'Education Policy Reform', author: 'I. Policy', affiliation: 'Education Policy Lab', pages: '85-96', category: 'current', pdf: '/assets/sample-current-8.pdf', journalId: 'jlle' },
-  { id: 'c9', title: 'Comparative Literature Studies', author: 'J. Critic', affiliation: 'Literature Research Unit', pages: '97-108', category: 'current', pdf: '/assets/sample-current-9.pdf', journalId: 'jlle' },
-  { id: 'c10', title: 'Technology in Language Learning', author: 'K. Innovator', affiliation: 'EdTech Research Lab', pages: '109-120', category: 'current', pdf: '/assets/sample-current-10.pdf', journalId: 'jlle' },
+  // Current issue for JLLE - Real chapters
+  { id: 'c1', title: 'The Representation of Nomadic Herdsmen Crises in Literature: Implications on the Environment', author: 'Chikere Onyechigoziri Austin', affiliation: '', pages: '1-31', category: 'current', pdf: '/assets/sample-current-1.pdf', journalId: 'jlle' },
+  { id: 'c2', title: 'Imagination and Ethnic Politics in the Mass Media and Selected Poems About Nigeria\'s Middle Belt Region', author: 'Joseph Abuh', affiliation: '', pages: '32-61', category: 'current', pdf: '/assets/sample-current-2.pdf', journalId: 'jlle' },
+  { id: 'c3', title: 'Black Characters and the Journey Motif in Daniel Black\'s "They Tell Me of a Home" and Breena Clarke\'s "River, Cross my Heart"', author: 'Valentine Chimenem Owhorodu', affiliation: '', pages: '62-81', category: 'current', pdf: '/assets/sample-current-3.pdf', journalId: 'jlle' },
+  { id: 'c4', title: 'L\'adjectif Qualificatif En Francais Et En Igala: Une Analyse Morphosyntaxique', author: 'Ojojdumi Oliver Akoje', affiliation: '', pages: '118-135', category: 'current', pdf: '/assets/sample-current-4.pdf', journalId: 'jlle' },
+  { id: 'c5', title: 'Dominant Language Ideology and the Plague of Ethnic Colonization in Nigeria', author: 'Eneojo Friday Ikani', affiliation: '', pages: '136-148', category: 'current', pdf: '/assets/sample-current-5.pdf', journalId: 'jlle' },
+  { id: 'c6', title: 'Effects of Language as the Defining Parameter for the Majority/Minority Ethnic Groups in Nigeria: The Role of Hausa in Northern Nigeria', author: 'Unwaha C.O. and Omachonu C.G.', affiliation: '', pages: '149-169', category: 'current', pdf: '/assets/sample-current-6.pdf', journalId: 'jlle' },
+  { id: 'c7', title: 'Simulation Based Early Warning System for Fulani Herders–Farmers Violent Conflict in the Middle Belt of Nigeria', author: 'Atabo Onuche Gideon', affiliation: '', pages: '170-188', category: 'current', pdf: '/assets/sample-current-7.pdf', journalId: 'jlle' },
+  { id: 'c8', title: 'Book Review', author: 'Joseph Abuh', affiliation: '', pages: '189-195', category: 'current', pdf: '/assets/sample-current-8.pdf', journalId: 'jlle' },
+  { id: 'c9', title: 'A Comparative Study of Igala and Yoruba Phonological Processes', author: 'Atadoga Francis Tijani', affiliation: '', pages: '196-217', category: 'current', pdf: '/assets/sample-current-9.pdf', journalId: 'jlle' },
 
   // Archive samples for JLLE (10)
   { id: 'a1', title: 'Historical Perspectives on Language Education', author: 'C. Historian', affiliation: 'Department of History, University of Ibadan', pages: '101-112', category: 'archive', pdf: '/assets/sample-archive-1.pdf', journalId: 'jlle' },

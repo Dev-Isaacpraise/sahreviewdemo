@@ -5,7 +5,7 @@ import { articles } from '../data/articles'
 
 export default function IndividualJournal(){
   const { id } = useParams<{ id: string }>()
-  const [activeTab, setActiveTab] = useState<'current' | 'archive' | 'about' | 'editorial'>('current')
+  const [activeTab, setActiveTab] = useState<'current' | 'archive' | 'about' | 'editorial' | 'submissions'>('current')
   const journal = journals.find(j => j.id === id)
   
   if (!journal) {
@@ -78,6 +78,16 @@ export default function IndividualJournal(){
           >
             Editorial Team
           </button>
+          <button
+            onClick={() => setActiveTab('submissions')}
+            className={`py-4 px-1 border-b-2 font-medium text-sm transition-all ${
+              activeTab === 'submissions'
+                ? 'border-purple-500 text-purple-600'
+                : 'border-transparent text-slate-500 hover:text-purple-600 hover:border-purple-300'
+            }`}
+          >
+            Submission Guidelines
+          </button>
         </nav>
       </div>
 
@@ -86,7 +96,7 @@ export default function IndividualJournal(){
         {activeTab === 'current' && (
           <div className="space-y-6">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-bold">Current Articles</h2>
+              <h2 className="text-2xl font-bold">Current Issue</h2>
               {currentArticles.length > 6 && (
                 <Link to={`/journal/${id}/current`} className="text-cyan-500 hover:text-cyan-600 font-medium">
                   See All →
@@ -108,9 +118,13 @@ export default function IndividualJournal(){
                   ]
                   return (
                     <article key={a.id} className={`bg-gradient-to-br ${gradients[index % gradients.length]} rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full`}>
-                      <h3 className="font-semibold text-lg mb-2 text-white">{a.title}</h3>
+                      <h3 className="font-semibold text-lg mb-2 text-white">
+                        {a.title.split('"').map((part, idx) => 
+                          idx % 2 === 1 ? <em key={idx}>"{part}"</em> : part
+                        )}
+                      </h3>
                       <div className="text-sm text-white/90 mb-1">{a.author}</div>
-                      <div className="text-xs text-white/80 mb-3">{a.affiliation}</div>
+                      {a.affiliation && <div className="text-xs text-white/80 mb-3">{a.affiliation}</div>}
                       <div className="text-sm text-white/90 mb-4 flex-grow">pp. {a.pages}</div>
                       <Link 
                         to={`/journal/article/${a.id}`}
@@ -155,9 +169,13 @@ export default function IndividualJournal(){
                   ]
                   return (
                     <article key={a.id} className={`bg-gradient-to-br ${gradients[index % gradients.length]} rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full`}>
-                      <h3 className="font-semibold text-lg mb-2 text-white">{a.title}</h3>
+                      <h3 className="font-semibold text-lg mb-2 text-white">
+                        {a.title.split('"').map((part, idx) => 
+                          idx % 2 === 1 ? <em key={idx}>"{part}"</em> : part
+                        )}
+                      </h3>
                       <div className="text-sm text-white/90 mb-1">{a.author}</div>
-                      <div className="text-xs text-white/80 mb-3">{a.affiliation}</div>
+                      {a.affiliation && <div className="text-xs text-white/80 mb-3">{a.affiliation}</div>}
                       <div className="text-sm text-white/90 mb-4 flex-grow">pp. {a.pages}</div>
                       <Link 
                         to={`/journal/article/${a.id}`}
@@ -223,6 +241,49 @@ export default function IndividualJournal(){
                   </div>
                 )
               })}
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'submissions' && (
+          <div className="bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 rounded-lg shadow-lg p-8 border-2 border-cyan-200">
+            <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Submission Guidelines</h2>
+            <div className="prose max-w-none space-y-6">
+              <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-cyan-200">
+                <h3 className="text-xl font-semibold mb-3 text-cyan-700">Author Guidelines</h3>
+                <ul className="list-disc list-inside text-slate-700 space-y-2">
+                  <li>Manuscripts should be between 5,000 and 9,000 words.</li>
+                  <li>All submissions must include an abstract of no more than 250 words.</li>
+                  <li>References should follow APA style.</li>
+                  <li>All submissions must be original and not previously published.</li>
+                  <li>Manuscripts should be submitted in Word or PDF format.</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-blue-200">
+                <h3 className="text-xl font-semibold mb-3 text-blue-700">Submission Preparation Checklist</h3>
+                <ol className="list-decimal list-inside text-slate-700 space-y-2">
+                  <li>Manuscript in Word or PDF format</li>
+                  <li>Completed cover letter</li>
+                  <li>All author affiliations and contact information</li>
+                  <li>Abstract (maximum 250 words)</li>
+                  <li>Keywords (5-7 keywords)</li>
+                </ol>
+              </div>
+
+              <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-teal-200">
+                <h3 className="text-xl font-semibold mb-3 text-teal-700">Review Process</h3>
+                <p className="text-slate-700">
+                  All submissions undergo a rigorous peer-review process. The editorial team is committed to maintaining high standards of academic excellence. Reviewers are selected based on their expertise in the relevant field.
+                </p>
+              </div>
+
+              <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-cyan-200">
+                <h3 className="text-xl font-semibold mb-3 text-cyan-700">Contact</h3>
+                <p className="text-slate-700">
+                  For submission inquiries, please contact: <a className="text-cyan-600 hover:text-cyan-700 font-medium" href={`mailto:${journal.email}`}>{journal.email}</a>
+                </p>
+              </div>
             </div>
           </div>
         )}

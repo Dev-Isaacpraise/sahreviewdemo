@@ -27,15 +27,21 @@ export default function JournalArticle(){
       </Link>
       
       <article className="bg-white rounded-lg shadow-sm p-8">
-        <h1 className="text-4xl font-bold mb-4">{article.title}</h1>
+        <h1 className="text-4xl font-bold mb-4">
+          {article.title.split('"').map((part, index) => 
+            index % 2 === 1 ? <em key={index}>"{part}"</em> : part
+          )}
+        </h1>
         
         <div className="border-b pb-6 mb-6">
           <div className="text-lg text-slate-700 mb-2">
             <strong>Author:</strong> {article.author}
           </div>
-          <div className="text-sm text-slate-600 mb-2">
-            <strong>Affiliation:</strong> {article.affiliation}
-          </div>
+          {article.affiliation && (
+            <div className="text-sm text-slate-600 mb-2">
+              <strong>Affiliation:</strong> {article.affiliation}
+            </div>
+          )}
           <div className="text-sm text-slate-600">
             <strong>Pages:</strong> {article.pages}
           </div>

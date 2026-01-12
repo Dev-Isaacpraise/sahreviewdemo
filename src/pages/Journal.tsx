@@ -7,7 +7,7 @@ export default function Journal(){
     <div className="space-y-12">
       {/* Journal Cards Section */}
       <section>
-        <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Our Journals</h1>
+        <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Journals</h1>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {journals.map((journal, index) => {
             const gradients = [
@@ -41,47 +41,6 @@ export default function Journal(){
         </div>
       </section>
 
-      {/* Submission Guidelines Section */}
-      <section className="bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50 rounded-lg shadow-lg p-8 border-2 border-cyan-200">
-        <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Submission Guidelines</h2>
-        <div className="prose max-w-none space-y-6">
-          <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-cyan-200">
-            <h3 className="text-xl font-semibold mb-3 text-cyan-700">Author Guidelines</h3>
-            <ul className="list-disc list-inside text-slate-700 space-y-2">
-              <li>Manuscripts should be between 5,000 and 9,000 words.</li>
-              <li>All submissions must include an abstract of no more than 250 words.</li>
-              <li>References should follow APA style.</li>
-              <li>All submissions must be original and not previously published.</li>
-              <li>Manuscripts should be submitted in Word or PDF format.</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-blue-200">
-            <h3 className="text-xl font-semibold mb-3 text-blue-700">Submission Preparation Checklist</h3>
-            <ol className="list-decimal list-inside text-slate-700 space-y-2">
-              <li>Manuscript in Word or PDF format</li>
-              <li>Completed cover letter</li>
-              <li>All author affiliations and contact information</li>
-              <li>Abstract (maximum 250 words)</li>
-              <li>Keywords (5-7 keywords)</li>
-            </ol>
-          </div>
-
-          <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-teal-200">
-            <h3 className="text-xl font-semibold mb-3 text-teal-700">Review Process</h3>
-            <p className="text-slate-700">
-              All submissions undergo a rigorous peer-review process. The editorial team is committed to maintaining high standards of academic excellence. Reviewers are selected based on their expertise in the relevant field.
-            </p>
-          </div>
-
-          <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-cyan-200">
-            <h3 className="text-xl font-semibold mb-3 text-cyan-700">General Contact</h3>
-            <p className="text-slate-700">
-              For general submission inquiries, please contact the specific journal's editorial team. Contact information can be found on each journal's dedicated page.
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

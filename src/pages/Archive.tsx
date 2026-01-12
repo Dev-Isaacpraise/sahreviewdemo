@@ -38,7 +38,9 @@ export default function Archive(){
           <div key={a.id} className={`bg-gradient-to-r ${colorGradients[index % colorGradients.length]} p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-between`}>
             <div className="flex-1 pr-4">
               <Link to={`/journal/article/${a.id}`} className="font-semibold text-lg text-white hover:text-white/90 block">
-                {a.title}
+                {a.title.split('"').map((part, idx) => 
+                  idx % 2 === 1 ? <em key={idx}>"{part}"</em> : part
+                )}
               </Link>
               <div className="text-sm text-white/90 mt-1">{a.author} • pp. {a.pages}</div>
               <div className="text-xs text-white/80 mt-1">{a.affiliation}</div>

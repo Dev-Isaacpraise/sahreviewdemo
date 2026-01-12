@@ -36,6 +36,13 @@ export default function Books(){
           </div>
         ))}
       </div>
+
+      <section className="bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 rounded-lg shadow-lg p-6 border-2 border-purple-200 mt-6">
+        <h2 className="text-xl font-semibold mb-3 text-purple-700">Submission Guidelines</h2>
+        <p className="text-slate-700">
+          For submission, contact <a className="text-purple-600 hover:text-purple-700 font-medium" href="mailto:scholarsacademichub@gmail.com">scholarsacademichub@gmail.com</a>
+        </p>
+      </section>
     </div>
   )
 }
