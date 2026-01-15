@@ -59,8 +59,7 @@ export default function Home(){
                 <div className="absolute -bottom-1 sm:-bottom-1 md:-bottom-2 left-0 right-0 h-8 sm:h-10 md:h-14 lg:h-16 bg-gradient-to-b from-cyan-600/90 via-teal-600/90 to-emerald-600/90 rounded-t-lg sm:rounded-t-xl md:rounded-t-2xl shadow-2xl transform scale-x-[1.05] sm:scale-x-[1.06] md:scale-x-[1.08]"></div>
                 {/* Books Image */}
                 <img 
-                  src="/assets/hero_books.png" 
-                  alt="Academic Books" 
+                  src="/assets/hero_books.png"  
                   className="relative z-10 w-full h-auto object-contain drop-shadow-2xl scale-105 sm:scale-110 md:scale-125"
                   style={{ filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.3))' }}
                 />
@@ -117,13 +116,13 @@ export default function Home(){
         <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">About Scholars Academic Hub</h2>
         <div className="prose max-w-none text-slate-700 space-y-4">
           <p>
-            Scholars Academic Hub is a premier online platform of the School of Languages, Kogi State College of Education Ankpa, Nigeria, is dedicated to publishing high-quality, peer-reviewed research across various disciplines. Our mission is to provide a dynamic space for scholars, researchers, and academics to share their work, foster collaboration, and contribute to the advancement of knowledge.
+            Scholars Academic Hub, a premier online platform of the School of Languages, Kogi State College of Education Ankpa, Nigeria, is dedicated to publishing high-quality, peer-reviewed research across various disciplines. Our mission is to provide a dynamic space for scholars, researchers, and academics to share their work, foster collaboration, and contribute to the advancement of knowledge.
           </p>
           <p>
             We publish online journals and books that cater to a wide range of academic fields, including sciences, humanities, social sciences, and more. Our publications are rigorously peer-reviewed, ensuring that our content meets the highest standards of academic excellence.
           </p>
           <p>
-            At Scholars Academic Hub, we believe in making knowledge accessible to all. Our open-access model allows readers from around the world to access and engage with our content, promoting global knowledge sharing and collaboration.
+            At Scholars Academic Hub, we believe in making knowledge accessible to all. Our open-access model allows readers from around the world to access and engage with our content, thereby promoting global knowledge sharing and collaboration.
           </p>
           <p>
             Join us in our pursuit of academic excellence and innovation. Submit your work, engage with our community, and contribute to the growth of knowledge.
